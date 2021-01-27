@@ -1,0 +1,22 @@
+h6 {
+    text-align: center;
+    padding: 20px 0px;
+}
+p {
+   font-size: 16px;
+   margin: 2%;
+   border-radius: 20px;
+   padding: 10px;
+   
+}
+button {
+    border: 1px solid red;
+    border-radius: 20px !important;
+    background-color: red;
+  border-radius: 10px;
+  height: 80px;
+  text-align: center;
+  padding: 10px;
+  
+
+}

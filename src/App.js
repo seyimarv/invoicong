@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import { Switch, Route} from 'react-router-dom';
+import Brand from './Brand';
+import Products from './Products';
+import Invoicing from './Invoicing';
+import InvoicingProducts from './invoicingproducts';
 
-function App() {
+const App = () => {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Switch>
+      <Route exact path='/'>
+        <Brand/>
+      </Route>
+      <Route exact path={`/Products/:name`} component={Products} />
+      <Route exact path='/invoicing' component={Invoicing} />
+      <Route exact path='/invoicingproducts' component={InvoicingProducts} />
+    </Switch>
   );
 }
 
